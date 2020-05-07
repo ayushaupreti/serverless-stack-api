@@ -19,7 +19,7 @@ custom:
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: dev
+  stage: prod
   region: us-east-1
 
   # These environment variables are made available to our functions
@@ -123,6 +123,6 @@ resources:
   - ${file(resources/dynamodb-table.yml)}
   # S3
   - ${file(resources/s3-bucket.yml)}
-  # Cognito User pool
+  # Cognito
   - ${file(resources/cognito-user-pool.yml)}
   - ${file(resources/cognito-identity-pool.yml)}
